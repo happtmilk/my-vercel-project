@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>论文写作与选刊工作台</title>
+<meta name="description" content="纯前端、零依赖的论文写作与投稿选刊工作台：草稿章节写作、录用目录主题画像、fit 选刊打分、计量分析。">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232563eb'/%3E%3Ctext x='16' y='22' font-size='15' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'%3EPW%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 应用骨架由 js/app.js 注入（#app 为挂载点，#view 为路由视图容器） -->
+<div id="app"><div id="view" class="view"></div></div>
+
+<noscript>本应用需要启用 JavaScript 才能运行。</noscript>
+
+<!-- ============ 本地解析库（离线可用，必须先于业务脚本加载） ============ -->
+<script src="js/vendor/xlsx.full.min.js"></script>
+<script src="js/vendor/mammoth.browser.min.js"></script>
+
+<!-- ============ 业务脚本（顺序敏感：工具 → 存储 → 解析 → 引擎 → 页面 → 路由） ============ -->
+<script src="js/util.js"></script>
+<script src="js/store.js"></script>
+<script src="js/importer.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/match.js"></script>
+<script src="js/stats.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
